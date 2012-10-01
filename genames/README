@@ -1,0 +1,11 @@
+A simple script to convert the Geonames RDF XML dump (http://download.geonames.org/all-geonames-rdf.zip) to RDF ntriple. The RDF dump contains all the geonames entries in a text formatted as a feature URI in one line followed by the RDF XML description in the next line for each feature. For example:
+
+http://sws.geonames.org/6/
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"><gn:Feature rdf:about="http://sws.geonames.org/6/"><rdfs:isDefinedBy>http://sws.geonames.org/6/about.rdf</rdfs:isDefinedBy><gn:name>Āb-e Yasī</gn:name><gn:featureClass rdf:resource="http://www.geonames.org/ontology#H"/><gn:featureCode rdf:resource="http://www.geonames.org/ontology#H.STM"/><gn:countryCode>IR</gn:countryCode><wgs84_pos:lat>32.8</wgs84_pos:lat><wgs84_pos:long>48.8</wgs84_pos:long><gn:parentFeature rdf:resource="http://sws.geonames.org/127082/"/><gn:parentCountry rdf:resource="http://sws.geonames.org/130758/"/><gn:parentADM1 rdf:resource="http://sws.geonames.org/127082/"/><gn:nearbyFeatures rdf:resource="http://sws.geonames.org/6/nearby.rdf"/><gn:locationMap rdf:resource="http://www.geonames.org/6/ab-e-yasi.html"/></gn:Feature></rdf:RDF>
+
+This script converts this dump to a ntriple file which can be used to load all the triples represented in the dump in a triple store.
+
+Make sure you have python and rdflib library for python installed.
+
+Unzip the all-geonames-rdf.zip file in the same directory of this script. After the script finish running (7 hours in my computer) there will be the geonames.nt file created which contains all the triples in ntriple
+
