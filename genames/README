@@ -7,7 +7,7 @@ This script converts this dump to a ntriple file which can be used to load all t
 
 Make sure you have python and rdflib library for python installed.
 
-Unzip the all-geonames-rdf.zip file in the same directory of this script. After the script finishes running (7 hours in my computer) there will be the geonames.nt file created which contains all the triples in ntriple
+Unzip the all-geonames-rdf.zip file in the same directory of this script. After the script finishes running (7 hours in my computer), there will be the geonames.nt file created which will contain all the triples in ntriple
 
 License
 -------
